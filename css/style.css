@@ -472,11 +472,11 @@ td:last-of-type {
 /* Soporte */
 .soporte {
   display: grid;
-  grid-template-areas: "header header header"
-                       ". aside ."
-                       "main main main";
+  grid-template-areas: "header"
+                       "aside"
+                       "main";
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .soporte {
@@ -488,12 +488,17 @@ td:last-of-type {
 .soporte__titulo {
   grid-area: header;
   text-align: center;
+  padding-top: 1rem;
   /* box-shadow: 0 0 1rem -.3rem var(--grisClaro); */
 }
 .soporte__entrada {
   grid-area: main;
-  padding: 3rem;
   box-shadow: 0 0 1rem -.3rem var(--grisClaro);
+}
+@media (min-width: 768px) {
+  .soporte__entrada {
+    padding: 2rem;
+  }
 }
 .soporte__entrada-titulo {
   text-align: center;
@@ -513,7 +518,6 @@ td:last-of-type {
 .soporte__aside {
   grid-area: aside;
   display: none;
-  padding: 3rem;
   box-shadow: 0 0 1rem -.3rem var(--grisClaro);
 }
 @media (min-width: 768px) {
@@ -521,11 +525,14 @@ td:last-of-type {
     grid-area: aside;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
   }
 }
 .soporte__aside2 {
   grid-area: aside;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 2rem;
   padding: 3rem;
   box-shadow: 0 0 1rem -.3rem var(--grisClaro);
