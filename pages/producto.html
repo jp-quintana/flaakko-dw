@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remera | FLAAKKO</title>
+    <title>FLAAKKO</title>
     <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="../css/style.css" as="style">
-    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="contenedor">
         <div class="header-grid">
-          <a class="logo" href="../index.html">
-            <img class="logo__nombre" src="../img/logo1 b.png" alt="logo flaakko">
-          </a>
-          <nav class="navegacion"> <!-- ver el iconos responsive con jonathan -->
+          <div class="logo">
+            <a class="logo__link" href="../index.html">
+              <img class="logo__nombre" src="../img/logo1 b.png" alt="logo flaakko">
+            </a>
+          </div>
+          <nav class="navegacion">
             <a class="navegacion__enlace" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -54,17 +56,17 @@
 
     <main class="main">
       <div class="contenedor">
-        <section class="display">
-          <div class="display__sticky">
-            <div class="display__info">
-              <h1 class="display__producto-nombre no-margin">De Gira</h1>
-              <p class="display__producto-detalle no-margin">Remera Blanca</p>
-              <p class="display__producto-precio no-margin">$2.000</p>
-              <div class="display__producto-color">
-                <img class="display__producto-miniatura" src="../img/display-producto-blanco-1.jpg" alt="">
-                <img class="display__producto-miniatura" src="../img/display-producto-negro-1.jpg" alt="">
+        <section class="producto">
+          <div class="producto__sticky">
+            <div class="producto__info">
+              <h1 class="producto__nombre no-margin">De Gira</h1>
+              <p class="producto__detalle no-margin">Remera Blanca</p>
+              <p class="producto__precio no-margin">$2.000</p>
+              <div class="producto__color">
+                <img class="producto__miniatura" src="../img/producto-blanco-1.jpg" alt="">
+                <img class="producto__miniatura" src="../img/producto-negro-1.jpg" alt="">
               </div>
-              <select class="display__producto-talle" name="">
+              <select class="producto__talle" name="">
                 <option value="xs" disabled selected>Elegi tu talle</option>
                 <option value="xs">XS</option>
                 <option value="s">S</option>
@@ -72,15 +74,15 @@
                 <option value="l">L</option>
                 <option value="xl">XL</option>
               </select>
-              <button class="display__producto-boton" type="button" name="button">Agregar a carrito</button>
-            </div> <!-- .display__info -->
-          </div> <!-- .display__sticky -->
+              <button class="producto__boton" type="button" name="button">Agregar a carrito</button>
+            </div> <!-- .producto__info -->
+          </div> <!-- .producto__sticky -->
 
-          <div class="display__sticky2">
-            <div class="display__contenedor-grid2">
-              <p class="display__producto-nombre2 no-margin">Remera <span>De Gira</span> blanca</p>
-              <p class="display__producto-precio2 no-margin">$2.000</p>
-              <select class="display__producto-talle2" name="">
+          <div class="producto__sticky2">
+            <div class="producto__info2">
+              <p class="producto__nombre2 no-margin">Remera <span>De Gira</span> blanca</p>
+              <p class="producto__precio2 no-margin">$2.000</p>
+              <select class="producto__talle2" name="">
                 <option value="xs" disabled selected>Elegi tu talle</option>
                 <option value="xs">XS</option>
                 <option value="s">S</option>
@@ -88,13 +90,13 @@
                 <option value="l">L</option>
                 <option value="xl">XL</option>
               </select>
-              <button class="display__producto-boton2" type="button" name="button">Agregar a carrito</button>
-            </div> <!-- .display__contenedor-grid2 -->
-          </div> <!-- .display__absolute2 -->
+              <button class="producto__boton2" type="button" name="button">Agregar a carrito</button>
+            </div> <!-- .producto__contenedor-grid2 -->
+          </div> <!-- .producto__absolute2 -->
 
-          <div class="display__img">
-            <img src="../img/display-producto-blanco-1.jpg" alt="">
-            <img src="../img/display-producto-blanco-2.jpg" alt="">
+          <div class="producto__img">
+            <img src="../img/producto-blanco-1.jpg" alt="">
+            <img src="../img/producto-blanco-2.jpg" alt="">
           </div>
         </section>
       </div> <!-- .contenedor -->
@@ -116,7 +118,7 @@
               <a class="paginas__enlace" href="sobre-nosotros.html">Sobre nosotros</a>
             </div>
           </section>
-          <section class="redes"> <!-- ver el iconos responsive con jonathan -->
+          <section class="redes">
             <a class="redes__enlace" href="https://www.instagram.com/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

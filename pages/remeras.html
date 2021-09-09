@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remeras | FLAAKKO</title>
+    <title>FLAAKKO</title>
     <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="../css/style.css" as="style">
-    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="contenedor">
         <div class="header-grid">
-          <a class="logo" href="../index.html">
-            <img class="logo__nombre" src="../img/logo1 b.png" alt="logo flaakko">
-          </a>
-          <nav class="navegacion"> <!-- ver el iconos responsive con jonathan -->
+          <div class="logo">
+            <a class="logo__link" href="../index.html">
+              <img class="logo__nombre" src="../img/logo1 b.png" alt="logo flaakko">
+            </a>
+          </div>
+          <nav class="navegacion">
             <a class="navegacion__enlace" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -54,47 +56,41 @@
 
     <main class="main">
       <div class="contenedor">
-        <section class="ventas">
-          <div class="ventas__producto">
-              <a href="producto.html" class="ventas__enlace">
-                <div class="ventas__imagen-contenedor">
-                  <img src="../img/venta-producto.jpg" alt="" class="ventas__imagen">
-                  <img src="../img/venta-producto-2.jpg" alt="" class="ventas__imagen-bottom">
+        <section class="productos">
+          <div class="productos__item">
+              <a href="producto.html" class="productos__enlace">
+                <div class="productos__imagen-contenedor">
+                  <img src="../img/venta-producto.jpg" alt="" class="productos__imagen">
+                  <img src="../img/venta-producto-2.jpg" alt="" class="productos__imagen-bottom">
                 </div>
-                <ul class="ventas__info">
-                  <li class="ventas__nombre">Remera <span>De Gira</span> blanca</li>
-                  <li class="ventas__precio">$2.000</li>
+                <ul class="productos__info">
+                  <li class="productos__nombre">Remera <span>De Gira</span> blanca</li>
+                  <li class="productos__precio">$2.000</li>
                 </ul>
-                <!-- <p class="ventas__nombre">Remera <span>De Gira</span> blanca</p>
-                <p class="ventas__precio">$2.000</p> -->
               </a>
           </div>
-          <div class="ventas__producto">
-              <a href="producto.html" class="ventas__enlace">
-                <div class="ventas__imagen-contenedor">
-                  <img src="../img/venta-producto.jpg" alt="" class="ventas__imagen">
-                  <img src="../img/venta-producto-2.jpg" alt="" class="ventas__imagen-bottom">
+          <div class="productos__item">
+              <a href="producto.html" class="productos__enlace">
+                <div class="productos__imagen-contenedor">
+                  <img src="../img/venta-producto.jpg" alt="" class="productos__imagen">
+                  <img src="../img/venta-producto-2.jpg" alt="" class="productos__imagen-bottom">
                 </div>
-                <ul class="ventas__info">
-                  <li class="ventas__nombre">Remera <span>De Gira</span> blanca</li>
-                  <li class="ventas__precio">$2.000</li>
+                <ul class="productos__info">
+                  <li class="productos__nombre">Remera <span>De Gira</span> blanca</li>
+                  <li class="productos__precio">$2.000</li>
                 </ul>
-                <!-- <p class="ventas__nombre">Remera <span>De Gira</span> blanca</p>
-                <p class="ventas__precio">$2.000</p> -->
               </a>
           </div>
-          <div class="ventas__producto">
-              <a href="producto.html" class="ventas__enlace">
-                <div class="ventas__imagen-contenedor">
-                  <img src="../img/venta-producto.jpg" alt="" class="ventas__imagen">
-                  <img src="../img/venta-producto-2.jpg" alt="" class="ventas__imagen-bottom">
+          <div class="productos__item">
+              <a href="producto.html" class="productos__enlace">
+                <div class="productos__imagen-contenedor">
+                  <img src="../img/venta-producto.jpg" alt="" class="productos__imagen">
+                  <img src="../img/venta-producto-2.jpg" alt="" class="productos__imagen-bottom">
                 </div>
-                <ul class="ventas__info">
-                  <li class="ventas__nombre">Remera <span>De Gira</span> blanca</li>
-                  <li class="ventas__precio">$2.000</li>
+                <ul class="productos__info">
+                  <li class="productos__nombre">Remera <span>De Gira</span> blanca</li>
+                  <li class="productos__precio">$2.000</li>
                 </ul>
-                <!-- <p class="ventas__nombre">Remera <span>De Gira</span> blanca</p>
-                <p class="ventas__precio">$2.000</p> -->
               </a>
           </div>
         </section>
@@ -117,7 +113,7 @@
               <a class="paginas__enlace" href="sobre-nosotros.html">Sobre nosotros</a>
             </div>
           </section>
-          <section class="redes"> <!-- ver el iconos responsive con jonathan -->
+          <section class="redes">
             <a class="redes__enlace" href="https://www.instagram.com/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

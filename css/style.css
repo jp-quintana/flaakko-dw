@@ -8,7 +8,6 @@
   --blanco: #ffffff;
   --negro: #000000;
 }
-
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px*/
@@ -16,12 +15,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/* Globales */
 body {
   font-family: var(--fuenteMonument);
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2;
-  /* letter-spacing: .2rem; */
 }
 input,
 textarea,
@@ -32,17 +32,6 @@ select {
 span {
   font-family: var(--fuenteMonument);
   font-weight: 800;
-}
-
-/* Globales */
-.contenedor {
-  max-width: 120rem;
-  width: 90%;
-  margin: 0 auto;
-}
-.logo {
-  height: auto;
-  width: auto;
 }
 a {
   text-decoration: none;
@@ -70,6 +59,11 @@ h4 {
 img {
   max-width: 100%;
 }
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
 
 /* Funcionales */
 .no-margin {
@@ -89,7 +83,6 @@ img {
   top: 0;
   background-color: var(--blanco);
   z-index: +1;
-  /* background-color: var(--blanco); */
 }
 .header-grid {
   padding-top: 2rem;
@@ -103,15 +96,6 @@ img {
     grid-template-rows: repeat(2, 1fr);
   }
 }
-/* @media (min-width: 768px) {
-  .header-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-between;
-    align-items: center;
-  }
-} */
 .logo__nombre {
   /* width: 25%; */
   width: 12rem;
@@ -121,13 +105,6 @@ img {
     gap: 2rem;
     justify-content: flex-end;
 }
-/* @media (min-width: 768px) {
-  .navegacion {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-  }
-} */
 .navegacion2 {
   display: none;
 }
@@ -137,28 +114,16 @@ img {
     gap: 4rem;
     grid-column: 1 / 3;
     justify-content: center;
-    /* font-weight: 800; */
   }
 }
-/* @media (min-width: 768px) {
-  .navegacion2 {
-    display: flex;
-    gap: 6rem;
-    grid-column: 1 / 3;
-    justify-content: center;
-  }
-} */
 .navegacion2__enlace {
   font-size: 1.6rem;
-  /* font-weight: 800; */
   text-transform: uppercase;
-
 }
 
 /* Presentacion */
 .presentacion {
   height: 70rem;
-  /* max-height: 100%; */
   position: relative;
   display: flex;
   align-items: center;
@@ -176,8 +141,8 @@ img {
   z-index: -1;
 }
 
-/* Productos */
-.productos {
+/* Categorias */
+.categorias {
   height: auto;
   display: grid;
   margin-bottom: 3rem;
@@ -186,21 +151,15 @@ img {
   align-items: center;
 }
 @media (min-width: 768px) {
-  .productos {
+  .categorias {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.productos__enlace {
+.categorias__enlace {
   margin: 0 auto;
   position: relative;
 }
-/* .productos__crossfade {
-  background-image: url(../img/producto imagen buzo2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-} */
-.productos__imagen {
+.categorias__imagen {
   display: block;
   object-fit: cover;
   -webkit-transition: all ease 1s;
@@ -209,10 +168,10 @@ img {
 	-ms-transition: all ease 1s;
 	transition: all ease 1s;
 }
-.productos__imagen:hover {
+.categorias__imagen:hover {
   opacity: 0;
 }
-.productos__imagen-bottom {
+.categorias__imagen-bottom {
  position: absolute;
  top: 50%;
  left: 50%;
@@ -225,20 +184,6 @@ img {
 }
 
 /* Newsletter */
-/* .newsletter {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  background-color: var(--negro);
-  margin-bottom: 3rem;
-}
-.newsletter__email{
- height: 3rem;
- width: 100%;
- font-family: var(--fuenteMonument);
-} */
 .newsletter {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -252,8 +197,6 @@ img {
 @media (min-width: 768px) {
   .newsletter {
     display: flex;
-    /* grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr); */
     align-items: center;
     justify-content: center;
   }
@@ -281,9 +224,8 @@ img {
   gap: 2rem;
 }
 .paginas__titulo-seccion {
-font-size: 1.6rem;
-font-weight: 800;
-/* text-transform: uppercase; */
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 .paginas__enlace {
   display: block;
@@ -341,44 +283,42 @@ td:last-of-type {
   text-align: right;
 }
 
-/* Remeras, Buzos y Accesorios */
-.ventas {
+/* Productos */
+.productos {
   width: 100%;
   display: grid;
   gap: 4rem;
   margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
-  .ventas{
+  .productos{
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.ventas__producto {
-  /* border: 1px solid; */
+.productos__item {
   box-shadow: 0 0 1rem -.3rem var(--grisClaro);
   transition: all .2s ease-in-out;
 }
-.ventas__producto:hover {
+.productos__item:hover {
   transform: scale(1.05);
 }
-.ventas__enlace {
+.productos__enlace {
   display: flex;
   flex-direction: column;
 }
-.ventas__enlace:hover {
+.productos__enlace:hover {
   color: var(--negro);
 }
-.ventas__imagen-contenedor {
+.productos__imagen-contenedor {
   align-self: center;
   width: 50%;
   position: relative;
 }
-.ventas__imagen {
+.productos__imagen {
   display: block;
   object-fit: cover;
-  /* width: 100%; */
 }
-.ventas__imagen:hover {
+.productos__imagen:hover {
   animation: slideshow 5s infinite;
 }
 @keyframes slideshow {
@@ -389,7 +329,7 @@ td:last-of-type {
     opacity: 0;
   }
 }
-.ventas__imagen-bottom {
+.productos__imagen-bottom {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -400,20 +340,132 @@ td:last-of-type {
   min-height: 100%;
   z-index: -1;
 }
-.ventas__info {
+.productos__info {
   list-style: none;
   line-height: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.ventas__nombre {
+.productos__nombre {
   font-size: 1.6rem;
-  /* text-transform: lowercase; */
 }
-.ventas__precio {
-  /* font-size: 1.5rem; */
+.productos__precio {
 }
+
+
+/* Producto */
+.producto {
+  display: grid;
+  grid-template-areas: "aside"
+                       "aside"
+                       "aside"
+                       "aside";
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .producto {
+    grid-template-areas: "main aside"
+                         "main aside"
+                         "main aside"
+                         "main aside";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+  }
+}
+.producto__sticky {
+  display: none;
+}
+@media (min-width: 768px) {
+  .producto__sticky {
+    display: contents;
+    grid-area: main;
+  }
+}
+.producto__info {
+  position: sticky;
+  top: 12.8rem;
+}
+.producto__detalle {
+  font-family: var(--fuenteMontserrat);
+  font-size: 1.6rem;
+}
+.producto__precio {
+  font-size: 1.6rem;
+  margin-bottom: 15rem;
+}
+.producto__color {
+  height: 15rem;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.producto__miniatura {
+  border: 1px solid var(--grisClaro);
+}
+.producto__miniatura:hover {
+  cursor: pointer;
+}
+.producto__talle {
+  border-bottom: none;
+}
+.producto__talle,
+.producto__talle2 {
+  width: 100%;
+  font-size: 1.6rem;
+  height: 4rem;
+}
+.producto__boton,
+.producto__boton2 {
+  color: var(--blanco);
+  background-color: var(--negro);
+  width: 100%;
+  height: 4rem;
+  border: none;
+}
+.producto__boton,
+.producto__boton2:hover {
+  cursor: pointer;
+}
+.producto__img {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* box-shadow: 0 0 1rem -.3rem var(--grisClaro); */
+}
+.producto__sticky2 {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .producto__sticky2 {
+    display: none;
+  }
+}
+.producto__info2 {
+  background-color: white;
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-areas: "nombre precio"
+                       "talle boton";
+  gap: 2rem;
+}
+.producto__nombre2 {
+  grid-area: nombre;
+}
+.producto__precio2 {
+  grid-area: precio;
+  text-align: right;
+}
+.producto__talle2 {
+  grid-area: talle;
+}
+.producto__boton2 {
+  grid-area: boton;
+}
+
 
 /* Contacto */
 .contacto {
@@ -433,7 +485,6 @@ td:last-of-type {
 }
 .contacto__fieldset {
   width: 90%;
-  /* padding: 5rem 5rem 0 5rem; */
   margin: 0 auto 0 auto;
   color: var(--negro);
   border: none;
@@ -441,7 +492,6 @@ td:last-of-type {
 .contacto__leyenda {
   font-size: 2.2rem;
   font-weight: 800;
-  /* padding-top: 3rem; */
 }
 .contacto__textarea {
   width: 90%;
@@ -593,119 +643,4 @@ td:last-of-type {
 .sobre-nosotros__img2 {
   grid-area: img2;
   width: 100%;
-}
-
-/* Display */
-.display {
-  display: grid;
-  grid-template-areas: "aside"
-                       "aside"
-                       "aside"
-                       "aside";
-  margin-bottom: 3rem;
-}
-@media (min-width: 768px) {
-  .display {
-    grid-template-areas: "main aside"
-                         "main aside"
-                         "main aside"
-                         "main aside";
-    grid-template-columns: 1fr 2fr;
-    column-gap: 3rem;
-  }
-}
-.display__sticky {
-  display: none;
-}
-@media (min-width: 768px) {
-  .display__sticky {
-    display: contents;
-    grid-area: main;
-  }
-}
-.display__info {
-  position: sticky;
-  top: 12.8rem;
-}
-.display__producto-nombre {
-}
-.display__producto-detalle {
-  font-family: var(--fuenteMontserrat);
-  /* font-weight: 700; */
-  font-size: 1.6rem;
-}
-.display__producto-precio {
-  font-size: 1.6rem;
-  margin-bottom: 15rem;
-}
-.display__producto-color {
-  height: 15rem;
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-.display__producto-miniatura {
-  border: 1px solid var(--grisClaro);
-}
-.display__producto-miniatura:hover {
-  cursor: pointer;
-}
-.display__producto-talle {
-  border-bottom: none;
-}
-.display__producto-talle,
-.display__producto-talle2 {
-  width: 100%;
-  font-size: 1.6rem;
-  height: 4rem;
-}
-.display__producto-boton,
-.display__producto-boton2 {
-  color: var(--blanco);
-  background-color: var(--negro);
-  width: 100%;
-  height: 4rem;
-  border: none;
-}
-.display__producto-boton,
-.display__producto-boton2:hover {
-  cursor: pointer;
-}
-.display__img {
-  grid-area: aside;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  /* box-shadow: 0 0 1rem -.3rem var(--grisClaro); */
-}
-.display__sticky2 {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .display__sticky2 {
-    display: none;
-  }
-}
-.display__contenedor-grid2 {
-  background-color: white;
-  padding: 2rem 5rem;
-  display: grid;
-  grid-template-areas: "nombre precio"
-                       "talle boton";
-  gap: 2rem;
-}
-.display__producto-nombre2 {
-  grid-area: nombre;
-}
-.display__producto-precio2 {
-  grid-area: precio;
-  text-align: right;
-}
-.display__producto-talle2 {
-  grid-area: talle;
-}
-.display__producto-boton2 {
-  grid-area: boton;
 }
