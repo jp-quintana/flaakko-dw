@@ -6,6 +6,7 @@
     <title>FLAAKKO</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
@@ -28,13 +29,16 @@
                 <line x1="21" y1="21" x2="15" y2="15" />
               </svg>
             </a>
-            <a class="navegacion__enlace" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <div class="navegacion__enlace">
+              <!-- Button trigger modal -->
+              <button type="button" class="navegacion__sign-in-modal" data-toggle="modal" data-target="#sign-in-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-              </svg>
-            </a>
+                </svg>
+              </button>
+            </div>
             <a class="navegacion__enlace" href="pages/carrito.html">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -62,25 +66,60 @@
             <source src="video/video.mp4" type="video/mp4">
           </video>
         </section>
+        <section class="capsula">
+          <div class="capsula__display">
+            <h1 class="capsula__titulo">Cápsula #01</h1>
+          </div>
+          <a href="pages/capsula.html" class="capsula__link">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/capsula-1.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/capsula-2.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/capsula-3.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </a>
+        </section>
         <section class="categorias">
-          <a href="pages/remeras.html" class="categorias__enlace">
-              <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
-              <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
-          </a>
-          <a href="pages/buzos.html" class="categorias__enlace">
-              <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
-              <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
-          </a>
-          <a href="pages/accesorios.html" class="categorias__enlace">
-              <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
-              <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
-          </a>
+          <h2 class="categorias__titulo">Categorías</h2>
+          <div class="categorias__grid">
+            <a href="pages/remeras.html" class="categorias__enlace categorias__enlace--remeras">
+                <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
+                <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
+            </a>
+            <a href="pages/buzos.html" class="categorias__enlace">
+                <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
+                <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
+            </a>
+            <a href="pages/accesorios.html" class="categorias__enlace">
+                <img class="categorias__imagen" src="img/producto imagen buzo.jpg" alt="">
+                <img class="categorias__imagen-bottom" src="img/producto imagen buzo 2.jpg" alt="">
+            </a>
+            </div>
         </section>
         <section class="newsletter">
           <p class="newsletter__parrafo no-margin">Subscribite a nuestra newsletter</p>
-          <form class="newsletter__form" action="index.html" method="post">
-            <input class="newsletter__email"type="email" name="email" value="" placeholder="tuemail@mail.com">
-          </form>
+            <!-- Button trigger modal -->
+            <button type="button" class="newsletter__sign-up-modal" data-toggle="modal" data-target="#newsletter-modal">Click acá</button>
         </section>
       </div> <!-- .contenedor -->
     </main>
@@ -101,7 +140,7 @@
               <a class="paginas__enlace" href="pages/sobre-nosotros.html">Sobre nosotros</a>
             </div>
           </section>
-          <section class="redes"> <!-- ver el iconos responsive con jonathan -->
+          <section class="redes">
             <a class="redes__enlace" href="https://www.instagram.com/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -129,5 +168,98 @@
         </div> <!-- .footer-grid -->
       </div> <!-- .contenedor -->
     </footer>
+
+    <!-- Modal Sign-In -->
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sign-in-exampleModalLongTitle">Iniciar sesion</h5>
+            <button type="button" class="close navegacion__sign-in-modal-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="navegacion__sign-in-modal-form" action="" method="">
+              <label class="block" for="email-sign-in">Tu email*</label>
+              <input class="modal--input block" type="email" name="email-sign-in" id="email-sign-in" value="" placeholder="tuemail@mail.com" required>
+              <br>
+
+                <label class="block" for="password-sign-in">Tu contraseña*</label>
+              <input class="modal--input block" type="password" name="password-sign-in" id="password-sign-in" value="" required>
+              <br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary modal--boton-secundario" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary modal--boton-primario">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Subscripcion Newsletter -->
+    <div class="modal fade" id="newsletter-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsletter-ModalLongTitle">Subscribite</h5>
+            <button type="button" class="close navegacion__sign-in-modal-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="newsletter__sign-in-modal-form" action="" method="">
+              <label class="block" for="email-newsletter">Tu email*</label>
+              <input class="modal--input block" type="email" name="email-newsletter" id="email-newsletter" value="" placeholder="tuemail@mail.com" required>
+              <br>
+
+              <label class="block" for="password-newsletter">Tu contraseña*</label>
+              <input class="modal--input block" type="password" name="password-newsletter" id="password-newsletter" value="" required>
+              <br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary modal--boton-secundario" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary modal--boton-primario">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Sign-In -->
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sign-in-exampleModalLongTitle">Iniciar sesion</h5>
+            <button type="button" class="close navegacion__sign-in-modal-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="navegacion__sign-in-modal-form" action="" method="">
+              <label class="block" for="email-sign-in">Tu email*</label>
+              <input class="modal--input block" type="email" name="email-sign-in" id="email-sign-in" value="" placeholder="tuemail@mail.com" required>
+              <br>
+
+                <label class="block" for="password-sign-in">Tu contraseña*</label>
+              <input class="modal--input block" type="password" name="password-sign-in" id="password-sign-in" value="" required>
+              <br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary modal--boton-secundario" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary modal--boton-primario">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
   </body>
 </html>
