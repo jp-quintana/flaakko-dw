@@ -472,7 +472,7 @@ img {
 
 .contacto {
   margin-bottom: 3rem;
-  .contacto__background {
+  &__background {
     height: 40rem;
     background-image: url(../img/fondo-contacto.jpg);
     background-size: cover;
@@ -480,39 +480,41 @@ img {
     background-position: center center;
     margin-bottom: 3rem;
   }
-  .contact__formulario {
+  &__formulario {
     background-color: $blanco;
     padding: 5rem;
-    .contacto__fieldset {
+    @at-root .contacto__fieldset {
       width: 90%;
       margin: 0 auto 0 auto;
       color: $negro;
       border: none;
-      .contacto__leyenda {
+      @at-root .contacto__leyenda {
         font-size: 2.2rem;
         font-weight: 800;
       }
-      .contacto__textarea {
+      @at-root .contacto__textarea {
         width: 90%;
       }
-      .contacto__boton {
+      @at-root .contacto__boton {
         font-family: $fuenteMonument;
         color: $blanco;
         background-color: $negro;
         height: 4rem;
         border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
       }
-      .contacto__boton:hover {
-        cursor: pointer;
+      @media (max-width: 768px) {
+        @at-root .contacto__select,
+        .contacto__input,
+        .contacto__boton,
+        .contacto__textarea {
+          width: 100%;
+        }
       }
-    }
-  }
-  @media (max-width: 768px) {
-    .contacto__select,
-    .contacto__input,
-    .contacto__boton,
-    .contacto__textarea {
-      width: 100%;
     }
   }
 }
@@ -524,49 +526,56 @@ img {
                        "main";
   gap: 3rem;
   margin-bottom: 2rem;
-  .soporte__titulo {
+
+  @media (min-width: 768px) {
+    grid-template-areas: "header header header"
+                         "aside main main"
+                         ". main main";
+  }
+
+  &__titulo {
     grid-area: header;
     text-align: center;
     padding-top: 1rem;
   }
-  .soporte__entrada {
+  &__entrada {
     grid-area: main;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
-    .soporte__entrada-titulo {
-      text-align: center;
-    }
+
     @media (min-width: 768px) {
-      .soporte__entrada-titulo {
+      padding: 2rem;
+    }
+
+    @at-root .soporte__entrada-titulo {
+      text-align: center;
+
+      @media (min-width: 768px) {
         text-align: left;
       }
+
     }
-    .soporte__parrafo {
+    @at-root .soporte__parrafo {
       font-family: $fuenteMontserrat;
       text-align: justify;
     }
-    .soporte__lista {
+    @at-root .soporte__lista {
       font-family: $fuenteMontserrat;
     }
   }
-  @media (min-width: 768px) {
-    .soporte__entrada {
-      padding: 2rem;
-    }
-  }
-  .soporte__aside {
+  &__aside {
     grid-area: aside;
     display: none;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
-  }
-  @media (min-width: 768px) {
-    .soporte__aside {
+
+    @media (min-width: 768px) {
       grid-area: aside;
       display: flex;
       flex-direction: column;
       padding: 2rem;
     }
+
   }
-  .soporte__aside2 {
+  &__aside2 {
     grid-area: aside;
     display: flex;
     flex-wrap: wrap;
@@ -574,30 +583,22 @@ img {
     column-gap: 2rem;
     padding: 3rem;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
-    .soporte__aside2-titulo {
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    @at-root .soporte__aside2-titulo {
       font-size: 1.8rem;
       font-weight: 800;
     }
-    .soporte__select {
+    @at-root .soporte__select {
       height: 3rem;
       width: 20rem;
       align-self: center;
     }
   }
-  @media (min-width: 768px) {
-    .soporte__aside2 {
-      display: none;
-    }
-  }
 }
-@media (min-width: 768px) {
-  .soporte {
-    grid-template-areas: "header header header"
-                         "aside main main"
-                         ". main main";
-  }
-}
-
 
 .sobre-nosotros {
   display: grid;

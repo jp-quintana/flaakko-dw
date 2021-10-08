@@ -355,77 +355,80 @@ img {
 
 .contacto {
   margin-bottom: 3rem; }
-  .contacto .contacto__background {
+  .contacto__background {
     height: 40rem;
     background-image: url(../img/fondo-contacto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     margin-bottom: 3rem; }
-  .contacto .contact__formulario {
+  .contacto__formulario {
     background-color: #ffffff;
     padding: 5rem; }
-    .contacto .contact__formulario .contacto__fieldset {
+    .contacto__fieldset {
       width: 90%;
       margin: 0 auto 0 auto;
       color: #000000;
       border: none; }
-      .contacto .contact__formulario .contacto__fieldset .contacto__leyenda {
+      .contacto__leyenda {
         font-size: 2.2rem;
         font-weight: 800; }
-      .contacto .contact__formulario .contacto__fieldset .contacto__textarea {
+      .contacto__textarea {
         width: 90%; }
-      .contacto .contact__formulario .contacto__fieldset .contacto__boton {
+      .contacto__boton {
         font-family: "Monument Extended", sans-serif;
         color: #ffffff;
         background-color: #000000;
         height: 4rem;
         border: none; }
-      .contacto .contact__formulario .contacto__fieldset .contacto__boton:hover {
-        cursor: pointer; }
-  @media (max-width: 768px) {
-    .contacto .contacto__select,
-    .contacto .contacto__input,
-    .contacto .contacto__boton,
-    .contacto .contacto__textarea {
-      width: 100%; } }
+        .contacto__boton:hover {
+          cursor: pointer; }
+      @media (max-width: 768px) {
+        .contacto__select,
+        .contacto__input,
+        .contacto__boton,
+        .contacto__textarea {
+          width: 100%; } }
 
 .soporte {
   display: grid;
   grid-template-areas: "header" "aside" "main";
   gap: 3rem;
   margin-bottom: 2rem; }
-  .soporte .soporte__titulo {
+  @media (min-width: 768px) {
+    .soporte {
+      grid-template-areas: "header header header" "aside main main" ". main main"; } }
+  .soporte__titulo {
     grid-area: header;
     text-align: center;
     padding-top: 1rem; }
-  .soporte .soporte__entrada {
+  .soporte__entrada {
     grid-area: main;
     box-shadow: 0 0 1rem -0.3rem #E1E1E1; }
-    .soporte .soporte__entrada .soporte__entrada-titulo {
-      text-align: center; }
     @media (min-width: 768px) {
-      .soporte .soporte__entrada .soporte__entrada-titulo {
-        text-align: left; } }
-    .soporte .soporte__entrada .soporte__parrafo {
+      .soporte__entrada {
+        padding: 2rem; } }
+    .soporte__entrada-titulo {
+      text-align: center; }
+      @media (min-width: 768px) {
+        .soporte__entrada-titulo {
+          text-align: left; } }
+    .soporte__parrafo {
       font-family: "Montserrat", sans-serif;
       text-align: justify; }
-    .soporte .soporte__entrada .soporte__lista {
+    .soporte__lista {
       font-family: "Montserrat", sans-serif; }
-  @media (min-width: 768px) {
-    .soporte .soporte__entrada {
-      padding: 2rem; } }
-  .soporte .soporte__aside {
+  .soporte__aside {
     grid-area: aside;
     display: none;
     box-shadow: 0 0 1rem -0.3rem #E1E1E1; }
-  @media (min-width: 768px) {
-    .soporte .soporte__aside {
-      grid-area: aside;
-      display: flex;
-      flex-direction: column;
-      padding: 2rem; } }
-  .soporte .soporte__aside2 {
+    @media (min-width: 768px) {
+      .soporte__aside {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem; } }
+  .soporte__aside2 {
     grid-area: aside;
     display: flex;
     flex-wrap: wrap;
@@ -433,20 +436,16 @@ img {
     column-gap: 2rem;
     padding: 3rem;
     box-shadow: 0 0 1rem -0.3rem #E1E1E1; }
-    .soporte .soporte__aside2 .soporte__aside2-titulo {
+    @media (min-width: 768px) {
+      .soporte__aside2 {
+        display: none; } }
+    .soporte__aside2-titulo {
       font-size: 1.8rem;
       font-weight: 800; }
-    .soporte .soporte__aside2 .soporte__select {
+    .soporte__select {
       height: 3rem;
       width: 20rem;
       align-self: center; }
-  @media (min-width: 768px) {
-    .soporte .soporte__aside2 {
-      display: none; } }
-
-@media (min-width: 768px) {
-  .soporte {
-    grid-template-areas: "header header header" "aside main main" ". main main"; } }
 
 .sobre-nosotros {
   display: grid;
