@@ -608,37 +608,37 @@ img {
                        "img2";
   margin-bottom: 3rem;
   gap: 2rem;
-  .sobre-nosotros__main {
+
+  @media (min-width: $breakpoint) {
+    display: grid;
+    grid-template-areas: "main img1"
+                         "img2 aside";
+    gap: 0;
+    column-gap: 6rem;
+  }
+
+  &__main {
     grid-area: main;
     align-self: center;
   }
-  .sobre-nosotros__parrafo {
+  &__parrafo {
     text-align: justify;
     align-self: center;
   }
-  .sobre-nosotros__img1 {
+  &__img1 {
     grid-area: img1;
     display: flex;
     flex-direction: column;
     align-self: center;
     gap: 1rem;
   }
-  .sobre-nosotros__aside {
+  &__aside {
     grid-area: aside;
     align-self: center;
   }
-  .sobre-nosotros__img2 {
+  &__img2 {
     grid-area: img2;
     width: 100%;
-  }
-}
-@media (min-width: $breakpoint) {
-  .sobre-nosotros {
-    display: grid;
-    grid-template-areas: "main img1"
-                         "img2 aside";
-    gap: 0;
-    column-gap: 6rem;
   }
 }
 

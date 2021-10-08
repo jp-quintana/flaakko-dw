@@ -452,31 +452,30 @@ img {
   grid-template-areas: "main" "img1" "aside" "img2";
   margin-bottom: 3rem;
   gap: 2rem; }
-  .sobre-nosotros .sobre-nosotros__main {
+  @media (min-width: 768px) {
+    .sobre-nosotros {
+      display: grid;
+      grid-template-areas: "main img1" "img2 aside";
+      gap: 0;
+      column-gap: 6rem; } }
+  .sobre-nosotros__main {
     grid-area: main;
     align-self: center; }
-  .sobre-nosotros .sobre-nosotros__parrafo {
+  .sobre-nosotros__parrafo {
     text-align: justify;
     align-self: center; }
-  .sobre-nosotros .sobre-nosotros__img1 {
+  .sobre-nosotros__img1 {
     grid-area: img1;
     display: flex;
     flex-direction: column;
     align-self: center;
     gap: 1rem; }
-  .sobre-nosotros .sobre-nosotros__aside {
+  .sobre-nosotros__aside {
     grid-area: aside;
     align-self: center; }
-  .sobre-nosotros .sobre-nosotros__img2 {
+  .sobre-nosotros__img2 {
     grid-area: img2;
     width: 100%; }
-
-@media (min-width: 768px) {
-  .sobre-nosotros {
-    display: grid;
-    grid-template-areas: "main img1" "img2 aside";
-    gap: 0;
-    column-gap: 6rem; } }
 
 .modal--input {
   width: 100%; }
