@@ -16,68 +16,66 @@
   </head>
   <body>
     <header class="header">
-      <div class="contenedor">
-        <div class="header-grid">
-          <div class="logo">
-            <a class="logo__link" href="index.html">
-              <img class="logo__nombre" src="img/logo1 b.png" alt="logo flaakko">
-            </a>
+      <div class="header-grid">
+        <div class="logo">
+          <a class="logo__link" href="index.html">
+            <img class="logo__nombre" src="img/logo1 b.png" alt="logo flaakko">
+          </a>
+        </div>
+        <nav class="navegacion">
+          <a class="navegacion__enlace" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="10" cy="10" r="7" />
+              <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+          </a>
+          <div class="navegacion__enlace">
+            <!-- Button trigger modal -->
+            <button type="button" class="navegacion__sign-in-modal" data-toggle="modal" data-target="#sign-in-modal">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+              </svg>
+            </button>
           </div>
-          <nav class="navegacion">
-            <a class="navegacion__enlace" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-              </svg>
-            </a>
-            <div class="navegacion__enlace">
-              <!-- Button trigger modal -->
-              <button type="button" class="navegacion__sign-in-modal" data-toggle="modal" data-target="#sign-in-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="12" cy="7" r="4" />
-                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                </svg>
-              </button>
-            </div>
-            <a class="navegacion__enlace" href="pages/carrito.html">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="6" cy="19" r="2" />
-                <circle cx="17" cy="19" r="2" />
-                <path d="M17 17h-11v-14h-2" />
-                <path d="M6 5l14 1l-1 7h-13" />
-              </svg>
-            </a>
-          </nav>
-          <nav class="navegacion2">
-              <a class="navegacion2__enlace" href="pages/remeras.html">Remeras</a>
-              <a class="navegacion2__enlace" href="pages/buzos.html">Buzos</a>
-              <a class="navegacion2__enlace" href="pages/accesorios.html">Accesorios</a>
-          </nav>
-        </div> <!-- .header-grid -->
-      </div> <!-- .contenedor -->
+          <a class="navegacion__enlace" href="pages/carrito.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <circle cx="6" cy="19" r="2" />
+              <circle cx="17" cy="19" r="2" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5l14 1l-1 7h-13" />
+            </svg>
+          </a>
+        </nav>
+        <nav class="navegacion2">
+            <a class="navegacion2__enlace" href="pages/remeras.html">Remeras</a>
+            <a class="navegacion2__enlace" href="pages/buzos.html">Buzos</a>
+            <a class="navegacion2__enlace" href="pages/accesorios.html">Accesorios</a>
+        </nav>
+      </div> <!-- .header-grid -->
     </header>
 
     <main class="main">
+      <section class="presentacion">
+        <img class="presentacion__logo no-margin centrar-texto" src="img/logo2 w.png" alt="logo flaakko 2">
+        <video autoplay loop muted class="presentacion__video">
+          <source src="video/video.mp4" type="video/mp4">
+        </video>
+      </section>
       <div class="contenedor">
-        <section class="presentacion">
-          <img class="presentacion__logo no-margin centrar-texto" src="img/logo2 w.png" alt="logo flaakko 2">
-          <video autoplay loop muted class="presentacion__video">
-            <source src="video/video.mp4" type="video/mp4">
-          </video>
-        </section>
         <section class="capsula">
           <div class="capsula__display">
             <h1 class="capsula__titulo">Cápsula #01</h1>
           </div>
           <a href="pages/capsula.html" class="capsula__link">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carousel1" class="carousel slide capsula__carousel" data-bs-ride="carousel">
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -90,11 +88,37 @@
                   <img src="img/capsula-3.jpg" class="d-block w-100 cover" alt="...">
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div id="carousel2" class="carousel slide capsula__carousel2" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/capsula-1-responsive.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/capsula-2-responsive.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/capsula-3-responsive.jpg" class="d-block w-100 cover" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -118,12 +142,12 @@
             </a>
             </div>
         </section>
-        <section class="newsletter">
-          <p class="newsletter__parrafo no-margin">Subscribite a nuestra newsletter</p>
-            <!-- Button trigger modal -->
-            <button type="button" class="newsletter__sign-up-modal" data-toggle="modal" data-target="#newsletter-modal">Click acá</button>
-        </section>
       </div> <!-- .contenedor -->
+      <section class="newsletter">
+        <p class="newsletter__parrafo no-margin">Subscribite a nuestra newsletter</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="newsletter__sign-up-modal" data-toggle="modal" data-target="#newsletter-modal">Click acá</button>
+      </section>
     </main>
 
     <footer class="footer">
