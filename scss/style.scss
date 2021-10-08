@@ -11,6 +11,8 @@ $negro: #000000;
 
 $breakpoint: 768px;
 
+// IMPORT
+@import "mixins";
 
 html {
   box-sizing: border-box;
@@ -288,32 +290,47 @@ img {
   display: grid;
   gap: 4rem;
   margin-bottom: 3rem;
-  .productos__item {
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
     box-shadow: 0 0 1rem -.3rem $grisClaro;
     transition: all .2s ease-in-out;
-    .productos__enlace {
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @at-root .productos__enlace {
       display: flex;
       flex-direction: column;
-      .productos__imagen-contenedor {
+
+      &:hover {
+        color: $negro;
+      }
+
+      @at-root .productos__imagen-contenedor {
         align-self: center;
         width: 50%;
         position: relative;
-        .productos__imagen {
+        @at-root .productos__imagen {
           display: block;
           object-fit: cover;
-        }
-        .productos__imagen:hover {
-          animation: slideshow 5s infinite;
-        }
-        @keyframes slideshow {
-          0%,100% {
-            opacity: 100%;
+          &:hover {
+            @include animar(slideshow, 5s, infinite);
           }
-          30%,70% {
-            opacity: 0;
+          @include keyframes(slideshow) {
+            0%,100% {
+              opacity: 100%;
+            }
+            30%,70% {
+              opacity: 0;
+            }
           }
         }
-        .productos__imagen-bottom {
+        @at-root .productos__imagen-bottom {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -325,28 +342,17 @@ img {
           z-index: -1;
         }
       }
-      .productos__info {
+      @at-root .productos__info {
         list-style: none;
         line-height: 3rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        .productos__nombre {
+        @at-root .productos__nombre {
           font-size: 1.6rem;
         }
       }
     }
-    .productos__enlace:hover {
-      color: $negro;
-    }
-  }
-  .productos__item:hover {
-    transform: scale(1.05);
-  }
-}
-@media (min-width: 768px) {
-  .productos{
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -357,106 +363,110 @@ img {
                        "aside"
                        "aside";
   margin-bottom: 3rem;
-  .producto__sticky {
-    display: none;
-    .producto__info {
-      position: sticky;
-      top: 12.8rem;
-      .producto__detalle {
-        font-family: $fuenteMontserrat;
-        font-size: 1.6rem;
-      }
-      .producto__precio {
-        font-size: 1.6rem;
-        margin-bottom: 15rem;
-      }
-      .producto__color {
-        height: 15rem;
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 1rem;
-        .producto__miniatura {
-          border: 1px solid $grisClaro;
-        }
-        .producto__miniatura:hover {
-          cursor: pointer;
-        }
-      }
-      .producto__talle {
-        border-bottom: none;
-      }
-      .producto__talle,
-      .producto__talle2 {
-        width: 100%;
-        font-size: 1.6rem;
-        height: 4rem;
-      }
-      .producto__boton,
-      .producto__boton2 {
-        color: $blanco;
-        background-color: $negro;
-        width: 100%;
-        height: 4rem;
-        border: none;
-      }
-      .producto__boton,
-      .producto__boton2:hover {
-        cursor: pointer;
-      }
-    }
-  }
-  .producto__img {
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+
   @media (min-width: 768px) {
-    .producto__sticky {
-      display: contents;
-      grid-area: main;
-    }
-  }
-  .producto__sticky2 {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    .producto__info2 {
-      background-color: white;
-      padding: 2rem 5rem;
-      display: grid;
-      grid-template-areas: "nombre precio"
-                           "talle boton";
-      gap: 2rem;
-      .producto__nombre2 {
-        grid-area: nombre;
-      }
-      .producto__precio2 {
-        grid-area: precio;
-        text-align: right;
-      }
-      .producto__talle2 {
-        grid-area: talle;
-      }
-      .producto__boton2 {
-        grid-area: boton;
-      }
-    }
-  }
-  @media (min-width: 768px) {
-    .producto__sticky2 {
-      display: none;
-    }
-  }
-}
-@media (min-width: 768px) {
-  .producto {
     grid-template-areas: "main aside"
                          "main aside"
                          "main aside"
                          "main aside";
     grid-template-columns: 1fr 2fr;
     column-gap: 3rem;
+  }
+
+  &__sticky {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: contents;
+        grid-area: main;
+    }
+
+    @at-root .producto__info {
+      position: sticky;
+      top: 12.8rem;
+      @at-root .producto__detalle {
+        font-family: $fuenteMontserrat;
+        font-size: 1.6rem;
+      }
+      @at-root .producto__precio {
+        font-size: 1.6rem;
+        margin-bottom: 15rem;
+      }
+      @at-root .producto__color {
+        height: 15rem;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        @at-root .producto__miniatura {
+          border: 1px solid $grisClaro;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+        }
+
+      }
+      @at-root .producto__talle {
+        border-bottom: none;
+      }
+      @at-root .producto__talle,
+      .producto__talle2 {
+        width: 100%;
+        font-size: 1.6rem;
+        height: 4rem;
+      }
+      @at-root .producto__boton,
+      .producto__boton2 {
+        color: $blanco;
+        background-color: $negro;
+        width: 100%;
+        height: 4rem;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+  &__img {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__sticky2 {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    @at-root .producto__info2 {
+      background-color: white;
+      padding: 2rem 5rem;
+      display: grid;
+      grid-template-areas: "nombre precio"
+                           "talle boton";
+      gap: 2rem;
+      @at-root .producto__nombre2 {
+        grid-area: nombre;
+      }
+      @at-root .producto__precio2 {
+        grid-area: precio;
+        text-align: right;
+      }
+      @at-root .producto__talle2 {
+        grid-area: talle;
+      }
+      @at-root .producto__boton2 {
+        grid-area: boton;
+      }
+    }
   }
 }
 
