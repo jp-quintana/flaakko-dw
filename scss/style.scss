@@ -140,14 +140,13 @@ img {
   }
 }
 
-.header2 {
+.header-pages {
   height: auto;
   position: sticky;
   width: 100%;
   top: 0;
   background-color: $blanco;
   z-index: +99;
-  // padding-bottom: 1rem;
 }
 
 .presentacion {
@@ -157,10 +156,10 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   @media (min-width: $breakpoint) {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
   }
 
   &__logo{
@@ -180,7 +179,7 @@ img {
   &__display {
    display: none;
 
-   @media (min-width: 768px) {
+   @media (min-width: $breakpoint) {
       display: contents;
    }
   }
@@ -198,14 +197,25 @@ img {
   &__carousel {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
        display: contents;
     }
   }
-  &__carousel2 {
+  &__display-responsive {
+    margin: 0 0 1rem 1rem;
+    @at-root .capsula__titulo-responsive {
+      display: contents;
+
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+
+    }
+  }
+  &__carousel-responsive {
     display: contents;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
        display: none;
     }
   }
@@ -223,7 +233,7 @@ img {
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -268,7 +278,7 @@ img {
   background-color: $negro;
   padding: 4rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -324,7 +334,7 @@ img {
   gap: 4rem;
   margin-bottom: 3rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint) {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -397,7 +407,7 @@ img {
                        "aside";
   margin-bottom: 3rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint) {
     grid-template-areas: "main aside"
                          "main aside"
                          "main aside"
@@ -409,7 +419,7 @@ img {
   &__sticky {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
         display: contents;
         grid-area: main;
     }
@@ -444,13 +454,13 @@ img {
         border-bottom: none;
       }
       @at-root .producto__talle,
-      .producto__talle2 {
+      .producto__talle-responsive {
         width: 100%;
         font-size: 1.6rem;
         height: 4rem;
       }
       @at-root .producto__boton,
-      .producto__boton2 {
+      .producto__boton-responsive {
         color: $blanco;
         background-color: $negro;
         width: 100%;
@@ -470,33 +480,33 @@ img {
     flex-direction: column;
     gap: 2rem;
   }
-  &__sticky2 {
+  &__sticky-responsive {
     position: sticky;
     bottom: 0;
     width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
         display: none;
     }
 
-    @at-root .producto__info2 {
+    @at-root .producto__info-responsive {
       background-color: white;
       padding: 2rem 5rem;
       display: grid;
       grid-template-areas: "nombre precio"
                            "talle boton";
       gap: 2rem;
-      @at-root .producto__nombre2 {
+      @at-root .producto__nombre-responsive {
         grid-area: nombre;
       }
-      @at-root .producto__precio2 {
+      @at-root .producto__precio-responsive {
         grid-area: precio;
         text-align: right;
       }
-      @at-root .producto__talle2 {
+      @at-root .producto__talle-responsive {
         grid-area: talle;
       }
-      @at-root .producto__boton2 {
+      @at-root .producto__boton-responsive   {
         grid-area: boton;
       }
     }
@@ -540,7 +550,7 @@ img {
         }
 
       }
-      @media (max-width: 768px) {
+      @media (max-width: $breakpoint) {
         @at-root .contacto__select,
         .contacto__input,
         .contacto__boton,
@@ -560,7 +570,7 @@ img {
   gap: 3rem;
   margin-bottom: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint) {
     grid-template-areas: "header header header"
                          "aside main main"
                          ". main main";
@@ -575,14 +585,14 @@ img {
     grid-area: main;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       padding: 2rem;
     }
 
     @at-root .soporte__entrada-titulo {
       text-align: center;
 
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint) {
         text-align: left;
       }
 
@@ -600,7 +610,7 @@ img {
     display: none;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       grid-area: aside;
       display: flex;
       flex-direction: column;
@@ -608,7 +618,7 @@ img {
     }
 
   }
-  &__aside2 {
+  &__aside-responsive {
     grid-area: aside;
     display: flex;
     flex-wrap: wrap;
@@ -617,11 +627,11 @@ img {
     padding: 3rem;
     box-shadow: 0 0 1rem -.3rem $grisClaro;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       display: none;
     }
 
-    @at-root .soporte__aside2-titulo {
+    @at-root .soporte__aside-responsive-titulo {
       font-size: 1.8rem;
       font-weight: 800;
     }
@@ -672,6 +682,37 @@ img {
   &__img2 {
     grid-area: img2;
     width: 100%;
+  }
+}
+
+.error {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__aviso {
+    font-size: 12vw;
+    color: $blanco;
+  }
+  &__boton {
+    font-size: 3vw;
+    font-weight: 800;
+    border: none;
+    box-shadow: 0 0 1rem -.3rem $grisClaro;
+    padding: 2rem;
+
+    @media (min-width: $breakpoint) {
+      padding: 4rem;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
   }
 }
 
