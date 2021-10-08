@@ -436,7 +436,8 @@ img {
     padding-top: 1rem; }
   .soporte__entrada {
     grid-area: main;
-    box-shadow: 0 0 1rem -0.3rem #E1E1E1; }
+    box-shadow: 0 0 1rem -0.3rem #E1E1E1;
+    padding: 2rem; }
     @media (min-width: 768px) {
       .soporte__entrada {
         padding: 2rem; } }
@@ -524,7 +525,8 @@ img {
     font-weight: 800;
     border: none;
     box-shadow: 0 0 1rem -0.3rem #E1E1E1;
-    padding: 2rem; }
+    padding: 2rem;
+    background-color: #ffffff; }
     @media (min-width: 768px) {
       .error__boton {
         padding: 4rem; } }
