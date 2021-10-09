@@ -459,9 +459,11 @@ img {
           text-align: left; } }
     .soporte__parrafo {
       font-family: "Montserrat", sans-serif;
+      font-size: 1.4rem;
       text-align: justify; }
     .soporte__lista {
-      font-family: "Montserrat", sans-serif; }
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.4rem; }
   .soporte__aside {
     grid-area: aside;
     display: none;
