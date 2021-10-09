@@ -228,7 +228,7 @@ img {
   &__grid {
     height: auto;
     display: grid;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     gap: 2rem;
     justify-content: center;
     align-items: center;
@@ -264,6 +264,7 @@ img {
        min-width: 100%;
        min-height: 100%;
        z-index: -1;
+
       }
     }
   }
@@ -332,6 +333,7 @@ img {
   width: 100%;
   display: grid;
   gap: 4rem;
+  margin-top: 1rem;
   margin-bottom: 3rem;
 
   @media (min-width: $breakpoint) {
@@ -343,7 +345,7 @@ img {
     transition: all .2s ease-in-out;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.01);
     }
 
     @at-root .productos__enlace {
@@ -356,7 +358,6 @@ img {
 
       @at-root .productos__imagen-contenedor {
         align-self: center;
-        width: 50%;
         position: relative;
         @at-root .productos__imagen {
           display: block;
@@ -391,6 +392,7 @@ img {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-top: 1rem;
         @at-root .productos__nombre {
           font-size: 1.6rem;
         }
