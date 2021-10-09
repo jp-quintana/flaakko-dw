@@ -529,7 +529,7 @@ img {
 .contacto {
   margin-bottom: 3rem;
   &__background {
-    height: 40rem;
+    height: 15rem;
     background-image: url(../img/fondo-contacto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -539,6 +539,7 @@ img {
   &__formulario {
     background-color: $blanco;
     padding: 5rem;
+    margin-bottom: 3;
     @at-root .contacto__fieldset {
       width: 90%;
       margin: 0 auto 0 auto;

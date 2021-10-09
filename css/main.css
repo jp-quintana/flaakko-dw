@@ -398,7 +398,7 @@ img {
 .contacto {
   margin-bottom: 3rem; }
   .contacto__background {
-    height: 40rem;
+    height: 15rem;
     background-image: url(../img/fondo-contacto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -406,7 +406,8 @@ img {
     margin-bottom: 3rem; }
   .contacto__formulario {
     background-color: #ffffff;
-    padding: 5rem; }
+    padding: 5rem;
+    margin-bottom: 3; }
     .contacto__fieldset {
       width: 90%;
       margin: 0 auto 0 auto;
